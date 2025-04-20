@@ -7,7 +7,7 @@ import dynamic from "next/dynamic"
 import { createPortal } from "react-dom"
 import EventPopup from "./EventPopup"
 
-// Dynamically import mapbox-gl with no SSR to avoid the "Failed toload" error
+// Dynamically import mapbox-gl with no SSR to avoid the "Failed toload" error r
 const MapboxMap = dynamic(
   async () => {
     const { Map, NavigationControl } = await import("mapbox-gl")
