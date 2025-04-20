@@ -1,0 +1,93 @@
+/* Scrollbar styling for the filter bar */
+.overflow-x-auto::-webkit-scrollbar {
+  height: 4px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 2px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Smooth hover transitions */
+.group {
+  transition: all 0.3s ease;
+}
+
+/* Shimmer effect for loading state */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.05) 25%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0.05) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Date filter button styles */
+.date-filter-btn {
+  position: relative;
+  z-index: 30;
+  transform-origin: center;
+}
+
+.date-filter-btn:hover {
+  z-index: 40;
+}
+
+.date-filter-btn .filter-emoji {
+  position: relative;
+  z-index: 2;
+}
+
+/* Ensure the calendar dropdown has proper z-index */
+.calendar-dropdown {
+  z-index: 50;
+}
+
+/* Calendar styling */
+button.month-nav {
+  transition: all 0.2s ease;
+}
+
+button.month-nav:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Calendar day button hover effects */
+.calendar-day {
+  transition: all 0.2s ease;
+}
+
+.calendar-day:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: scale(1.05);
+}
+
+/* Month selector styling */
+.month-selector {
+  transition: all 0.2s ease;
+}
+
+.month-selector:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}

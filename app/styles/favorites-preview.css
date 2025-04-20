@@ -1,0 +1,60 @@
+/* Favorites Preview Animations */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.favorites-preview-container {
+  animation: float 6s ease-in-out infinite;
+}
+
+.favorites-item {
+  transition: all 0.3s ease;
+}
+
+.favorites-item:hover {
+  transform: translateY(-2px);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* View all text glow effect */
+.view-all-text {
+  position: relative;
+  overflow: hidden;
+}
+
+.view-all-text::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(251, 191, 36, 0.6), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.view-all-text:hover::after {
+  transform: translateX(100%);
+}
+
+/* Arrow shape animation */
+@keyframes pulse-arrow {
+  0%,
+  100% {
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  50% {
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
+.arrow-shape {
+  animation: pulse-arrow 3s infinite;
+}

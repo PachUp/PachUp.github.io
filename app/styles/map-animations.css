@@ -1,0 +1,30 @@
+import type React from 
+\
+"react"
+import 
+"./globals.css"
+import 
+"./styles/map-animations.css"
+import { Inter } from 'next/font/google'
+
+const inter = Inter({ subsets: ["latin"] })
+
+export const metadata = {
+  title: "Event Discovery Map",
+  description: "Discover events near you with our interactive map",
+}
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return (
+    <html lang="en">
+      <head>
+        <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
+      </head>
+      <body className={inter.className}>{children}</body>
+    </html>
+  )
+}
